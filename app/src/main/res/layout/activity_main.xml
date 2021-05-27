@@ -211,6 +211,7 @@
         android:layout_width="115dp"
         android:layout_height="115dp"
        android:layout_margin="16dp"
+        app:layout_constraintEnd_toStartOf="@id/mcv_recarregar"
         app:layout_constraintStart_toEndOf="@id/mcv_pagar"
         app:layout_constraintTop_toBottomOf="@id/mcv_card_conta">
 
@@ -252,7 +253,6 @@
         android:layout_height="115dp"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/mcv_transferir"
         app:layout_constraintTop_toBottomOf="@id/mcv_card_conta">
 
 
