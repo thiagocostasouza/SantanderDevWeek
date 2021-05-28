@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.thiagoio.santanderdevweek.R
 import com.thiagoio.santanderdevweek.data.Conta
+import com.thiagoio.santanderdevweek.extensions.toMoneyFormat
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tv_agenciaNum).text = conta.agencia.toString()
         findViewById<TextView>(R.id.tv_usuario).text = conta.cliente
         findViewById<TextView>(R.id.tv_conta_corrente_num).text = conta.num.toString()
-        findViewById<TextView>(R.id.tv_saldoNum).text = conta.saldo.toString()
-        findViewById<TextView>(R.id.tv_saldo_com_limite_num).text = conta.limite.toString()
+        findViewById<TextView>(R.id.tv_saldoNum).text = conta.saldo.toMoneyFormat()
+        findViewById<TextView>(R.id.tv_saldo_com_limite_num).text = conta.limite.toMoneyFormat()
         findViewById<TextView>(R.id.num_cartao_final).text = conta.cartao.toString()
     }
 
